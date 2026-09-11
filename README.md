@@ -2,20 +2,21 @@
 
 ## Estrutura de pastas
 
+```
 titanic/
 ├── dataset/
-│ └── train.csv # dataset do Titanic
+│   └── train.csv                          # dataset do Titanic
 ├── scripts/
-│ ├── 01_diagnostico.py # diagnóstico inicial (sem alterar os dados)
-│ ├── 02_tratamento_valores_ausentes.py # dropna / preencher com média / mediana
-│ ├── 05_main_decisiontree.py # roda a inference engine baseada em regras
-│ ├── rules/
-│ │ └── titanic_rules.py # REGRAS_TITANIC usadas na inferência
-│ └── enginee/
-│ └── inference_engine.py # inferir_primeira / explicar_inferencia
+│   ├── 01_diagnostico.py                  # diagnóstico inicial (sem alterar os dados)
+│   ├── 02_tratamento_valores_ausentes.py  # dropna / preencher com média / mediana
+│   ├── 05_main_decisiontree.py            # roda a inference engine baseada em regras
+│   ├── rules/
+│   │   └── titanic_rules.py               # REGRAS_TITANIC usadas na inferência
+│   └── enginee/
+│       └── inference_engine.py            # inferir_primeira / explicar_inferencia
 ├── requirements.txt
 └── README.md
-
+```
 
 > **Atenção ao nome da pasta:** o script `05_main_decisiontree.py` importa de
 > `enginee.inference_engine` (com dois "e"). Confirme que a pasta se chama
@@ -25,7 +26,7 @@ titanic/
 
 Na raiz do projeto (`titanic/`):
 
-```bash
+```
 .venv\Scripts\activate      # Windows
 # ou
 source .venv/bin/activate   # Mac/Linux
@@ -37,7 +38,7 @@ pip install -r requirements.txt
 
 Todos os scripts são executados **de dentro da pasta `scripts/`**:
 
-```bash
+```
 cd scripts
 python 01_diagnostico.py
 python 02_tratamento_valores_ausentes.py
@@ -62,7 +63,7 @@ python 05_main_decisiontree.py
 Caso não queira entrar na pasta `scripts/`, rode a partir da raiz do projeto passando o
 caminho completo:
 
-```bash
+```
 python scripts/01_diagnostico.py
 ```
 
